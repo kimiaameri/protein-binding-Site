@@ -48,5 +48,5 @@ write.csv(bigtable.norm,bigtableWeightFile)
 #-------------------------------------------------------------------------#
 #             find significant genes by permutation test                  #
 #-------------------------------------------------------------------------#
-significatGenes<-permutationTest(bigtable.norm)
+significatGenes<-permutationTest(bigtable.norm,Resisdant,Suseptible)
 write.csv(significatGenes,SignificatGenes)
