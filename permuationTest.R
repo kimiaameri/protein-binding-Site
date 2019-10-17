@@ -1,3 +1,5 @@
+argv <- commandArgs(trailingOnly = TRUE)
+
 permutationTest<- function(bigtable.norm)
 {
   ##------------------ find significant genes for normal table -------##
