@@ -6,7 +6,13 @@ inputFiles <- argv[4]
 bigtableFile <- argv[5]
 bigtableWeightFile<-argv[6]
 
-source(paste0(sourcePath,"/intesect_reference_vcf.R"))
+source(paste0(sourcePath,"/source/Inputs.R"))
+source(paste0(sourcePath,"/source/permutationTest.R"))
+source(paste0(sourcePath,"/source/BlastFindings.R"))
+source(paste0(sourcePath,"/source/MutationPosition.R"))
+source(paste0(sourcePath,"/source/GenePosition.R"))
+source(paste0(sourcePath,"/source/Filters.R"))
+source(paste0(sourcePath,"/source/FisherTest.R"))
 
 
 #-----------------------------------------------------------------------#
