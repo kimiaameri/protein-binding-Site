@@ -5,6 +5,7 @@ intersectionspath <- argv[3]
 inputFiles <- argv[4]
 bigtableFile <- argv[5]
 bigtableWeightFile<-argv[6]
+SignificatGenes<-argv[7]
 
 source(paste0(sourcePath,"/source/Inputs.R"))
 source(paste0(sourcePath,"/source/permutationTest.R"))
@@ -44,3 +45,8 @@ bigtable.norm <- bigtable.norm[rowSums(bigtable.norm)!= 0,]
 #-------------------------------------------------------------------------#
 write.csv(bigtable,bigtableFile)
 write.csv(bigtable.norm,bigtableWeightFile)
+#-------------------------------------------------------------------------#
+#             find significant genes by permutation test                  #
+#-------------------------------------------------------------------------#
+significatGenes<-permutationTest(bigtable.norm)
+write.csv(significatGenes,SignificatGenes)
